@@ -2,14 +2,24 @@
 void swap (float *a,float *b);
 
 int main(){
+    int l1,l2,l3;
     //定义数组
-    float num1[] = {1,5,9,6,7,8,2,4,3};
-    float num2[] = {3,9,5,4,6,8,7,2,1};
-    float num3[] = {6,2,3,7,8,5,1,9,2};
+    float num1[l1];
+    float num2[l3];
+    float num3[l2];
     //定义必要变量
+    float q1,q2,q3;
     int m = 0;
     int k2 = 0;
     int cnt;
+
+    printf("hello\n");
+    scanf("%d",&l1);
+    printf("press enter");
+    for (int p1 = 0;p1 < l1;p1++){
+        scanf("%f",&q1);
+        num1[p1] = q1;
+    }
     //实现冒泡排序
     for (int i = 1;i < sizeof(num1) / sizeof(num1[0]); i++){
         int n1 =0;
