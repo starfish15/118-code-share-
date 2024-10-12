@@ -1,11 +1,10 @@
 #include <stdio.h>
 int main(){
-    char a = 'A';
-    char b = 'a';
 
-    printf("%d",b - a);
-    printf("%c",a);
-    printf("%c",a + 32);
+    int a,b;
+    
+
+    printf("%d",sizeof(char));
     
     return 0;
 }
