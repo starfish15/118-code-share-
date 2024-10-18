@@ -1,25 +1,21 @@
 #include <stdio.h>
+//该函数用于交换两个数的值
 void swap (float *a,float *b);
 
 int main(){
-    int l1,l2,l3;
     //定义数组
-    float num1[l1];
-    float num2[l3];
-    float num3[l2];
+    //可以修改数组成分来测试代码
+    float num1[] = {1,5,6,8,9,7,4,3,2};
+    float num2[] = {5,4,3,7,8,2,9,1,6};
+    float num3[] = {9,5,8,7,2,1,3,4,6};
     //定义必要变量
     float q1,q2,q3;
     int m = 0;
     int k2 = 0;
     int cnt;
 
-    printf("hello\n");
-    scanf("%d",&l1);
-    printf("press enter");
-    for (int p1 = 0;p1 < l1;p1++){
-        scanf("%f",&q1);
-        num1[p1] = q1;
-    }
+    //目标为实现数组的从小到大排列
+    printf("\t      hello\n");
     //实现冒泡排序
     for (int i = 1;i < sizeof(num1) / sizeof(num1[0]); i++){
         int n1 =0;
@@ -71,10 +67,13 @@ int main(){
     for (int k1 = 0;k1 < sizeof(num2) / sizeof(num2[0]);k1++){
         printf("%.1f ",num2[k1]);
     }
+    printf("\nPress \"Enter\" to end the programe");
+    getchar();
+
     return 0;
 }
 
-//该函数用于交换两个数的值
+
 void swap (float *a,float *b){
     float t;
     t = *a;
