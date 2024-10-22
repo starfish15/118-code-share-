@@ -1,15 +1,33 @@
 #include <stdio.h>
 int main(){
-    float x,v1,lim_v1;
-    scanf("%f %f",&v1,&lim_v1);
-    x = (v1 - lim_v1) / lim_v1 * 100;
-    
-    if(v1 < 1.1*lim_v1 && v1 < (int)(1.1*lim_v1)){
-        printf("OK");
-    }else if(v1 = (int)(1.1*lim_v1) || v1 >= 1.1*lim_v1 && v1 < 1.5*lim_v1){
-        printf("Exceed %.0f%%. Ticket 200",x);
-    }else{
-        printf("Exceed %.0f%%. Licence Revoked",x);
+    int max,min,n,m,r;
+    //获取勾股数
+    int num[3];
+    for(int i = 0;i < 3;i++){
+        scanf("%d",&num[i]);
     }
+    max = num[0];
+    min = num[0];
+    //判断最大/最小值
+    for(int j = 0;j < 3;j++){
+        if(max < num[j]){
+            max = num[j];
+        }
+        if(min > num[j]){
+            min = num[j];
+        }
+    }
+    //获取最大公约数
+    n = max;
+    m = min;
+    r = n % m;
+    while (r != 0){
+       n = m;
+       m = r;
+       r = n % m;
+    }
+    //打印结果
+    printf("%d/%d",min / m,max / m);
+    
     return 0;
 }
