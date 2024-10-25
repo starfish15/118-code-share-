@@ -1,0 +1,18 @@
+void swap (float *a,float *b){
+    float t;
+    t = *a;
+    *a = *b;
+    *b = t;
+}
+
+void sort(int *num1,int length){
+    for (int i = 1;i < length; i++){
+        int n1 =0;
+        for (int j = 1;j < length; j++){
+            if(num1[n1] > num1[n1 + 1]){
+                swap(&num1[n1],&num1[n1 + 1]);
+            }
+            n1++;
+        }
+    }
+}
