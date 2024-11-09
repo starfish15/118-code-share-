@@ -1,4 +1,4 @@
-void swap (int *a,int *b){
+void swap(int *a,int *b){
     float t;
     t = *a;
     *a = *b;
@@ -7,12 +7,31 @@ void swap (int *a,int *b){
 
 void sort(int *num1,int length){
     for (int i = 1;i < length; i++){
-        int n1 =0;
-        for (int j = 1;j < length; j++){
-            if(num1[n1] > num1[n1 + 1]){
-                swap(&num1[n1],&num1[n1 + 1]);
+        for (int j = 0;j < length - i; j++){
+            if(num1[j] > num1[j + 1]){
+                swap(&num1[j],&num1[j + 1]);
             }
-            n1++;
         }
     }
+}
+
+void sort_pro(int *num1,int begin,int end){
+    for (int i = begin;i < end; i++){
+        for (int j = begin;j < end - i; j++){
+            if(num1[j] > num1[j + 1]){
+                swap(&num1[j],&num1[j + 1]);
+            }
+        }
+    }
+}
+
+int Highest_common_factor(int a,int b){
+    int r = a % b;
+    while (r != 0){
+        a = b;
+        b = r;
+        r = a % b;
+    }
+    
+    return b;
 }
