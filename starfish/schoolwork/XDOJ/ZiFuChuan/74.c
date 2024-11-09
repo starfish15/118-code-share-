@@ -12,7 +12,7 @@ int main(){
             n1 = 1;
             n2 = 0;
             n3 = 0;            
-            for(int j = i + 1;j < 50;j++){    
+            for(int j = i + 1;j < strlen(character);j++){    
                 if(character[j] == ')'){
                     n1--;
                 }else if (character[j] == ']'){
@@ -72,7 +72,7 @@ int main(){
             n1 = 0;
             n2 = 0;
             n3 = 1;            
-            for(int j = i + 1;j < 50;j++){    
+            for(int j = i + 1;j < strlen(character);j++){    
                 if(character[j] == ')'){
                     n1--;
                 }else if (character[j] == ']'){
